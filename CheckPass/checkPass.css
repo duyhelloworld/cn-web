@@ -1,0 +1,39 @@
+  * {
+      background-color: rgb(122, 222, 232);
+  }
+
+  html,
+  body {
+      margin: 0;
+      padding: 0;
+  }
+
+  .box {
+      width: 40%;
+      margin-top: 10%;
+      margin-left: 30%;
+      border: 2px solid rgb(122, 223, 23);
+      border-radius: 15px;
+  }
+
+  .contents {
+      padding: 10%;
+  }
+
+  .title {
+      font-size: 26px;
+      font-family: "Courier New", Courier, monospace;
+  }
+
+  #passwd-reset,
+  #submitBtn {
+      cursor: pointer;
+  }
+
+  #passwd {
+      background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  #submitBtn {
+      margin-left: 20%;
+  }

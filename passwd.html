@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Enter usename</span> <br>
+    <input type="text" name="username" id="username" class="userName"> <br>
+    <a href="http://google.com">    <span>Forgot password</span>    </a><br>
+    <input type="password" name="pass" id="passwd"> <br>
+    <button type="submit" id="subBtn">Submit</button>
+</body>
+</html>
+
+<script>
+    let passwd = document.getElementById('passwd');
+    var username = document.getElementById('username');
+    var subBtn = document.getElementById('subBtn');
+    let usr = document.getElementsByClassName('userName');
+    
+    subBtn.addEventListener("click", () => {
+        if (usr.value) {
+            alert("Enter username?")
+        }
+    })
+</script>
