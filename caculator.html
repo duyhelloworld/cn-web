@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caculator</title>
+  </head>
+  <body>
+    <style>
+      html, body {
+        background-color: black;
+        color: white;
+      }
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .caculator {
+        width: 450px;
+        height: 600px;
+        background-color: gray;
+        border-radius: 10px;
+      }
+      .result-box {
+        width: 400px;
+        height: 120px;
+        background-color: white;
+        margin: 20px 0 0 25px;
+        border-radius: 5px;
+      }
+      /* .result-line1{
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.97);
+      }
+      .result-line2{
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.97);
+      }
+      .result-line{
+        font-size: 36px;
+        color: black;
+      } */
+      button {
+        padding: 25px 36px;
+        margin: 5px -2px 0 5px;
+        font-size: 15px;
+      }
+      button:active{
+        background-color: gray;
+      }
+      .border-box {
+        border: 2px solid black;
+        margin: 23px;
+        border-radius: 5px;
+        padding-bottom: 30px;
+      }
+      .have4buttons {
+        width: 400px;
+        height: 70px;
+        margin: 6px 0 3px 3%;
+      }
+      .have3buttons {
+        width: 400px;
+        height: 70px;
+        margin: 6px 0 3px 3%;
+      }
+      #equalOpe {
+        padding: 62px 36px;
+        margin: 7px 22px 0 0;
+      }
+      .equal-operator {
+        float: right;
+      }
+      .line0 {
+        width: 400px;
+        height: 70px;
+        margin: 6px 0 3px 3%;
+      }
+      #acBtn {
+        padding: 25px 31px;
+        background-color: yellow;
+        border-radius: 5px;
+        border: none;
+        color: green;
+      }
+      #acBtn:active{
+        background-color: gray;
+        color: white;
+      }
+
+      #button0 {
+        padding: 25px 84px;
+      }
+    </style>
+
+    <div class="flex-center">
+      <div class="caculator">
+        <div class="result-box">
+            <!-- <div class="result-line1">
+                112
+            </div>
+            <div class="result-line2">
+                123
+            </div>
+            <div class="result-line">
+                1232
+            </div> -->
+        </div>
+
+        <div class="border-box">
+          <div class="operator have4buttons">
+            <button id="modOpe">%</button>
+            <button id="divideOpe">/</button>
+            <button id="multiOpe">*</button>
+            <button id="minusOpe">_</button>
+          </div>
+
+          <div class="line789 have4buttons">
+            <button id="button7">7</button>
+            <button id="button8">8</button>
+            <button id="button9">9</button>
+            <button id="plusOpe">+</button>
+          </div>
+          <div class="equal-operator">
+            <button id="equalOpe">=</button>
+          </div>
+          <div class="line456 have3buttons">
+            <button id="button4">4</button>
+            <button id="button5">5</button>
+            <button id="button6">6</button>
+          </div>
+          <div class="line123 have3buttons">
+            <button id="button1">1</button>
+            <button id="button2">2</button>
+            <button id="button3">3</button>
+          </div>
+
+          <div class="line0">
+            <button id="acBtn">AC</button>
+            <button id="button0">0</button>
+            <button id="dotOpe">.</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./caculator.js"></script>
+  </body>
+</html>

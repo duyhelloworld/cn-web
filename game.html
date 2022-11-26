@@ -7,6 +7,12 @@
     <title>Game</title>
 </head>
 <style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
     #board{
         border: 1px solid;
         background-color: gray;
@@ -19,11 +25,19 @@
         font-size: 100px;
     }
 
-    .character{
+    .guest{
         width: 120px;
         height: 120px;
         padding: 10px;
         background-color: aqua;
+        float: left;
+        margin: 10px;
+    }
+    .thief{
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        background-color: red;
         float: left;
         margin: 10px;
     }
@@ -34,21 +48,23 @@
     .hidden {
         visibility: hidden;
     }
-
 </style>
 <body>
     <input type="button" value="Play" onclick="startGame()">
-    <div id="board">
-        <div class="character">1</div>
-        <div class="character">2</div>
-        <div class="character">3</div>
-        <div class="character">4</div>
-        <div class="character">5</div>
-        <div class="character">6</div>
-        <!-- <div class="character">7</div>
-            <div class="character">8</div> -->
-            <div id="count">    </div>
-    </div> 
+    <div class="container">
+        <div id="board">
+            <div class="guest">1</div>
+            <div class="guest">2</div>
+            <div class="guest">3</div>
+            <div class="guest">4</div>
+            <div class="guest">5</div>
+            <div class="guest">6</div>
+            <div class="guest">7</div>
+            <div class="guest">8</div>
+            
+        </div> 
+        <div id="count">    </div>
+    </div>
 </body>
 </html>
 
@@ -57,7 +73,7 @@
         gameLoop();
         updateCount();
     }
-
+    
     var count = 0, loop = 0;
     function updateCount() {
         count++;
@@ -68,40 +84,39 @@
     var peopleVisible = false;
 
     let gameLoop = () => {
+        loop++;
+        if (loop > 10) {
+            alert("Game over");
+            let replay = confirm("Do you want to replay?");
+            if (replay) {
+                window.location.reload();
+            }
+            return ;
+        }
         peopleVisible = !peopleVisible;
         createChar();
-        flashChar();
-        loop++;
-        if (loop < 12) {
-            setTimeout(gameLoop, 3000);
-        }
-        else {
-            alert("Game over");
-        }
+        setTimeout(gameLoop, 1000); // must be
     }
 
     var board = document.getElementById('board');
-    function flashChar() {
-        var classToSet = "";
-        if (peopleVisible) {
-            classToSet = "character visible";
-        }
-        else 
-            classToSet = "character hidden";
-
-        for (let index = 0; index < 6; index++) {
-            board.children[index].className = classToSet;
-        }
-    }
-
-    var randomChar;
+    const numberOfCharacter = board.children.length;
+    console.log(numberOfCharacter);
+    let randNum;
     function createChar() {
-        for (let index = 0; index < 6; index++) {
+        let classToSet = peopleVisible ? "visible" : "hidden";
+        for (let index = 0; index < numberOfCharacter; index++) {
+            board.children[index].className = classToSet;
             board.children[index].innerHTML = "Guest";
             board.children[index].onclick = () => { gameScore+= -2}
         }
-        randomChar = Math.floor((Math.random() * 6) + 1);
-            board.children[randomChar - 1].innerHTML = "Thief";
-            board.children[randomChar - 1].onclick = () => { gameScore++};
+        randNum = Math.floor((Math.random() * numberOfCharacter) + 1);
+        console.log(randNum);
+        board.children[randNum - 1].innerHTML = "Thief";
+        board.children[randNum - 1].className = classToSet + "thief";
+        board.children[randNum - 1].onclick = () => {
+            gameScore++;
         }
+        
+        board.children[randomChar - 1].onclick = () => { gameScore++};
+    }
 </script>
