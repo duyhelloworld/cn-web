@@ -18,15 +18,14 @@
         <a class="about-us" href="https://github.com/duyhelloworld/cnweb"
           >About Us</a
         >
-        <a class="service" href="#" onclick="alert('No, you can\'t open service now!')">Services</a>
-        <a class="team" href="#" onclick="alert('No, you can\'t go to team now!')">Team</a>
+        <a class="service" href="#" onclick="window.location.href = 'http://cnweb-0184466.great-site.net/Caculator/caculator.html'">Caculator</a>
+        <a class="team" href="#" onclick="alert('Sorry, you can\'t go to team now!')">Team</a>
         <a class="login" href="http://cnweb-0184466.great-site.net/CheckPass/checkPass.html">Login</a>
       </nav>
     </div>
 
     <div class="flex-parent">
       <div class="box box1">
-        <div class="content-box">
           <h4><a href="https://github.com/duyhelloworld/cnweb">Duy Writer</a></h4>
         <h2>Coding</h2>
         <h1>Professional Coder Share His Experience ☺️</h1>
@@ -37,11 +36,9 @@
         <a href="https://voz.vn/f/lap-trinh-cntt.91/"
           >Click here to read more</a
         >
-        </div>
       </div>
 
       <div class="box box2">
-        <div class="content-box">
           <h4><a href="https://google.com">Teacher</a></h4>
         <h2>Learning</h2>
         <h1>Nowaday, May Employees Become Jobless?</h1>
@@ -50,11 +47,9 @@
           refer much to employees
         </h5>
         <a href="https://voz.vn/f/kinh-te-luat.92/">Click here to read more</a>
-        </div>
       </div>
 
       <div class="box box3">
-        <div class="content-box">
           <h4><a href="https://facebook.com">Anonymous Writer</a></h4>
         <h2>Server, NAS</h2>
         <h1>Share Knowledge About NAS/Server</h1>
@@ -62,7 +57,6 @@
         <a href="https://voz.vn/f/server-nas-render-farm.83/"
           >Click here to read more</a
         >
-        </div>
       </div>
     </div>
 
@@ -83,6 +77,7 @@
   body {
     padding: 0;
     margin: 0;
+    background-attachment:fixed;
   }
   a {
     text-decoration: none;
@@ -108,15 +103,11 @@
   }
 
   .box {
-    width: 190%;
-    height: 33%;
-    margin-top: 20%;
+    margin: 3% 10px 0 0;
+    padding: 20px;
     border: 2px solid yellow;
     border-radius: 32px;
     background-color: rgba(34, 0, 51, 0.4);
-  }
-  .content-box{
-    padding: 20px;
   }
   .flex-parent {
     display: flex;
@@ -130,7 +121,7 @@
   }
 
   footer {
-    margin-top: 20%;
+    margin-top: 110px;
     text-align: center;
   }
 </style>
