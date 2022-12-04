@@ -106,9 +106,4 @@ document.addEventListener('keydown', (e) => {
   if (keyButtonCode === 8 && resultScreen.innerText) {
     resultScreen.innerText = resultScreen.innerText.slice(0, -1);
   }
-      
-  // if () {
-        
-  // }
-
 });
