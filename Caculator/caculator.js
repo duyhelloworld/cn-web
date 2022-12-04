@@ -1,6 +1,5 @@
-setTimeout(() => {
-  alert("You can type code by your keyboard")
-}, 2000);
+setTimeout(
+  alert("You can type code by your keyboard"), 2000);
 
 let resultScreen = document.getElementById("resultScreen");
 
