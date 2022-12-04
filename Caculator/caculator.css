@@ -1,0 +1,93 @@
+html,
+body {
+    background-color: black;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.caculator {
+    width: 450px;
+    height: 610px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#resultScreen {
+    border: 1px solid;
+    text-align: right;
+    height: 100px;
+    line-height: 130px;
+    padding: 16px 20px;
+    font-size: 32px;
+}
+
+.resultBox {
+    width: 400px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 10px 22px 0 22px;
+    background-color: white;
+}
+
+.border-buttons {
+    border: 2px solid black;
+    margin: 23px;
+    height: 410px;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 25px 36px;
+    margin: 3px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#deleBtn {
+    padding: 25px 30px;
+}
+
+.button:active {
+    background-color: gray;
+}
+
+.have4buttons {
+    padding: 5px 2px 0 16px;
+}
+
+.have3buttons {
+    padding: 0 2px 2px 14px;
+}
+
+#equalOpe {
+    padding: 64px 35px;
+    margin: 4px 18px 0 0;
+    float: right;
+}
+
+#AC {
+    padding: 25px 31px;
+    background-color: yellow;
+    border-radius: 5px;
+    border: none;
+    color: green;
+}
+
+#AC:active {
+    background-color: gray;
+    color: white;
+}
+
+#button0 {
+    padding: 25px 84px;
+}
+
+.branch {
+    margin-left: 190px;
+    font-family: 'Courier New', Courier, monospace;
+}
