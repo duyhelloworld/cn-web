@@ -1,0 +1,42 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  --bg-color: #aaa;
+  --box-item-width: 95%;
+  --box-item-margin: 50px 0 0 10px;
+}
+
+.container {
+  margin: 3% 2% 0 2%;
+}
+
+.thumbnail{
+    color: yellowgreen;
+    font-style: oblique;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 0 #000,-2px 0 #fff;
+}
+
+.box-insert {
+  float: left;
+}
+#content-item {
+  width: 190%;
+  border-radius: 10px;
+}
+.btnAdd {
+  float: right;
+}
+.box-items {
+  background-color: var(--bg-color);
+  width: var(--box-item-width);
+  height: 70vh;
+  margin: var(--box-item-margin);
+  border-radius: 5px;
+  overflow: scroll;
+}
+.list {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  list-style-type: none;
+}

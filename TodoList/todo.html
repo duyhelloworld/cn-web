@@ -5,90 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
+    <link rel="stylesheet" href="./todo.css">
 </head>
-
-<style>
-    html,body{
-        padding: 0;
-        margin: 0;
-        --bg-color: #aaa;
-        --box-item-width: 95%;
-        --box-item-margin: 50px 0 0 10px;
-    }
-    .container{
-        margin: 3% 2% 0 2%;
-    }
-    .box-insert{
-        float: left;
-    }
-    #content-item{
-        width: 190%;
-        border-radius: 10px;
-    }
-    .btnAdd{
-        float: right;
-    }
-    .box-items{
-        background-color: var(--bg-color);
-        width: var(--box-item-width);
-        height: 550px;
-        margin: var(--box-item-margin);
-    }
-    #list{
-        padding: 20px;
-    }
-</style>
-
 <body>
     <div class="container">
-        <div class="title">TODO App</div>
+        <div class="thumbnail">TODO App</div>
         <nav class="box-insert">
-            <input type="text" id="content-item" value="Items">
-            <!-- placeholder="Enter item here ... -->
+            <input type="text" id="content-item" placeholder="Enter task here ...">
         </nav>
-        <input id="btnAdd" class="btnAdd" type="button" value="Add items">
+        <input class="btnAdd" type="button" value="Add task">
     </div>
-    <input type="button" value="Load Data" onclick="loadList();">
-    <input type="button" value="Save" onclick="saveList();">
-    <div class="box-items" id="list">
+
+    
+    <div class="box-items">
+        <ul class="list">
+            
+        </ul>
+    </div>
+    <div>
+        <button id="loadDataBtn" onclick="loadList()">Load Data</button>
+        <button id="saveBtn" onclick="saveList()">Save</button>
     </div>
 </body>
 </html>
 
-<script>
-
-    let btnAdd = document.getElementById('btnAdd');
-    let contentItem = document.getElementById('content-item');
-    let list = document.getElementById('list');
-    var stt = 0;
-
-    let addTasks = () => {
-        stt++;
-        let divTask = document.createElement('div');
-        let html = "<span style=\"border: 2px solid #888;border-radius:2px;color :";
-        if (stt % 2 === 0) {
-            html += " red;\">";
-        }
-        else html += " blue;\">";
-        html += stt;
-        html += ". ";
-        html += contentItem.value;
-        html += "</span>";
-        divTask.innerHTML = html;
-        list.appendChild(divTask);
-    }
-    
-    btnAdd.addEventListener('click', addTasks);
-
-    let removeItem = () => {
-        
-    }
-
-    let saveList = () => {
-        list.innerHTML = localStorage.danhSach;
-    }
-    let loadList = () => {
-        localStorage.danhSach = list.innerHTML;
-    }
-
-</script>
+<script src="./todo.js"></script>
